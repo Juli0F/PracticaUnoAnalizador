@@ -1,0 +1,151 @@
+ER:
+ 
+ entero id [
+ 			  	[ [,id+] (= (+|-) digito (digito)*) | e ]* 
+ 			  | 
+ 			  	=(+|-)digito (digito)* ( [ [,id+]   (= (+|-) digito (digito)*) | e ]* )
+ 		   ];
+
+ 
+ decimal id [
+ 				[ [,id+] (= (+|-) digito (digito)* . digito (digito)* ) | e ]* 
+ 			  | 
+ 				(=(+|-)digito(digito)* . digito(digito)* )[ [,id+] (= (+|-) digito (digito)* . digito (digito)* ) | e ]* 
+ 		    ];
+
+
+ cadena id  [
+ 				[(,id)+ {(="letra*") | e}]*
+ 			  |
+ 			    [="letra*" {[(,id)+ {(="letra*") | e}]*}]
+ 			];
+
+booleano id [
+				[(,id)+ { (=verdadero)|(=falso)| e}]*
+			  |
+			   [(=falso)|(=verdadero)][(,id)+ { (=verdadero)|(=falso)| e}]*
+			];
+
+ caracter id  [
+ 				[(,id)+ {(='letra') | e}]*
+ 			  |
+ 			    [='letra' {[(,id)+ {(='letra') | e}]*}]
+ 			];
+
+
+Aritmeticos
+
+//suma o cancatenacion
+
+("letra*") | [(+|-) digito (digito)*] + [("letra*") | [(+|-) digito (digito)*]]
+
+//resta, 
+
+[(+|-) digito (digito)*] - [ digito (digito)*]
+
+
+//multiplicacion, division
+
+[(+|-) digito (digito)*] (*|/) [(+|-) digito (digito)*]
+
+incremento y decremento
+
+(+|-)digito (digito)* (++|--)
+
+
+
+relacionalees
+
+( digito digito*  )( '||' | '&&' | < | > |<= | >= ) ( digito digito*  )
+
+( digito digito* | "letra*" )( != | ==) ( digito digito*  | "letra*")
+
+
+agrupacion
+(sentencia)
+
+
+
+condiciones
+
+(si)(relacionales){ (declaracion | suma |  resta | multiplicacion)*}[sino_si(relacionales){ (declaracion | suma |  resta | multiplicacion)*}]*|[sino{(declaracion | suma |  resta | multiplicacion|condiciones | comentario)*}]
+
+
+mientras(relacionales){ (declaracion | suma |  resta | multiplicacion | condiciones )*}
+
+comentario
+
+//(letra)*
+/* (letra)* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 											{  (,id)   [( ,id | =(+|-)digito(digito)*)]* }* ];
+
+ decim id [(,id) | =(+|-)digito(digito)* . digito(digito)* { (,id) [( ,id | =(+|-)digito(digito)* . digito(digito)*)]* }*];
+
+ cadena id[(,id) | ="letra*" [  (,id)* (,id) | = "letra*" ]*] ;
+
+
+
+
+
+
+
+
+
+
+entero x = -1 = 1 =1
+entero id [ [,id+]   (= (+|-) digito (digito)*) | e ]*
+
+
+entero id [( ,id (   =(+|-)digito { (digito)* | (,id)*[( ,id | =(+|-)digito(digito)*)]* } )*    )*]  
+
+entero id [,id ( =(+|-) digito digito* )*  ]*;
+
+
+
+
+
+
+entero id [ ,id (=)  ]*
+entero id [( ,id (   =(+|-)digito { (digito)* | (,id)*[( ,id | =(+|-)digito(digito)*)]* } )*    )*  
+
+
+
+
+| =(+|-)digito { (digito)* | (,id)*[( ,id | =(+|-)digito(digito)*)]* }];
+
+
+			
