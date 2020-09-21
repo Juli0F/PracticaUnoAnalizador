@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\AlfabetoToken.cs" />
+    <Compile Include="Clases\ColorText.cs" />
     <Compile Include="Clases\FileManager\Interprete.cs" />
     <Compile Include="Clases\Nodo.cs" />
+    <Compile Include="Clases\Tabla.cs" />
+    <Compile Include="Clases\TablaEstados.cs" />
     <Compile Include="Formularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

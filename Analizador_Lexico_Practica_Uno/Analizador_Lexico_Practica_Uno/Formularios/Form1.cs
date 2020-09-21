@@ -15,20 +15,22 @@ namespace Analizador_Lexico_Practica_Uno
 {
     public partial class Form1 : Form
     {
+        private Interprete interprete;
         public Form1()
         {
             InitializeComponent();
             panelContenedor.Visible = true;
+
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-                   }
+        }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
-            Nodo n = new Nodo("Prueba","A","Rojo");
+            Nodo n = new Nodo("Prueba","A",Color.Red);
             n.writeInRichText(richTextBox1);
            
             Console.WriteLine("Nuevo");
@@ -91,18 +93,41 @@ namespace Analizador_Lexico_Practica_Uno
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Pintar();
-            richTextBox1.Invoke. = "Hola";
-            richTextBox1.SelectionColor = Color.Red;
-            richTextBox1.Text = "Hola d";
-        }
-        private void Pintar()
-        {
-            List<string> texto = richTextBox1.Lines.ToList<String>();
-            texto.ForEach(x => { Console.WriteLine(x);
+            //Pintar();
+            //Tabla tabla = new Tabla();
+            //tabla.crearNodos();
+            //int i = 0;
+            //tabla.getAlfabeto().ForEach(x =>
+            //{
 
+            //  Console.WriteLine(x + "  posicion "+i+" ");
+            // i++;
+            //});
+            //tabla.CrearTabla();
+
+            //richTextBox1.SelectionColor = Color.Red;
+
+            AlfabetoToken alfabetoToken = new AlfabetoToken(richTextBox2);
+            
+
+
+            
+
+            List<string> texto = richTextBox1.Lines.ToList<String>();
+
+            texto.ForEach(x => {
+
+                alfabetoToken.Characterizar(x);
 
             });
         }
+        private void Pintar()
+        {
+            
+            
+
+        }
+
+        
     }
 }
