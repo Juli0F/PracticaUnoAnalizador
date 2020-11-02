@@ -1,0 +1,26 @@
+HKCR
+{
+	WinGraphviz.BinaryImage.1 = s 'BinaryImage Class'
+	{
+		CLSID = s '{6B3F62C8-80CE-470D-B2E4-0BA42A035228}'
+	}
+	WinGraphviz.BinaryImage = s 'BinaryImage Class'
+	{
+		CLSID = s '{6B3F62C8-80CE-470D-B2E4-0BA42A035228}'
+		CurVer = s 'WinGraphviz.BinaryImage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6B3F62C8-80CE-470D-B2E4-0BA42A035228} = s 'BinaryImage Class'
+		{
+			ProgID = s 'WinGraphviz.BinaryImage.1'
+			VersionIndependentProgID = s 'WinGraphviz.BinaryImage'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{052DB09C-95F7-43BD-B7F8-492373D1151E}'
+		}
+	}
+}

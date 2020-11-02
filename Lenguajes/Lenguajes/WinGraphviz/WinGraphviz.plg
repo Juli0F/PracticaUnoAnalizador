@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WinGraphviz - Win32 Release MinDependency--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ood\LOCALS~1\Temp\RSP412.tmp" with contents
+[
+/nologo /o"ReleaseMinDependency/WinGraphviz.bsc" 
+.\ReleaseMinDependency\StdAfx.sbr
+.\ReleaseMinDependency\dotneato.sbr
+.\ReleaseMinDependency\Error_win32_com_Imp.sbr
+.\ReleaseMinDependency\IBinaryImage.sbr
+.\ReleaseMinDependency\IDOT.sbr
+.\ReleaseMinDependency\INEATO.sbr
+.\ReleaseMinDependency\ITWOPI.sbr
+.\ReleaseMinDependency\jmemnobs.sbr
+.\ReleaseMinDependency\Tools.sbr
+.\ReleaseMinDependency\WinGraphviz.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ood\LOCALS~1\Temp\RSP412.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+WinGraphviz.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

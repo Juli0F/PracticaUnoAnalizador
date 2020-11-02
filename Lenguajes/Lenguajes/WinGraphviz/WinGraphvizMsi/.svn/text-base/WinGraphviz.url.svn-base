@@ -1,0 +1,14 @@
+[DEFAULT]
+BASEURL=http://home.so-net.net.tw/oodtsen/wingraphviz/index.htm
+[DOC#4#5]
+BASEURL=http://home.so-net.net.tw/oodtsen/wingraphviz/navi2.htm
+ORIGURL=navi2.htm
+[DOC#4#6#7]
+BASEURL=http://home.so-net.net.tw/oodtsen/wingraphviz/index_en.htm
+ORIGURL=index_en.htm
+[DOC#4#6#8]
+BASEURL=http://home.so-net.net.tw/oodtsen/wingraphviz/footer.htm
+ORIGURL=footer.htm
+[InternetShortcut]
+URL=http://home.so-net.net.tw/oodtsen/wingraphviz/index.htm
+Modified=E04D8294A9FFC401B0

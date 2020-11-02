@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinGraphviz", "WinGraphviz.vcproj", "{835F3941-B421-4D30-BC8F-68F1D84D6BBB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinGraphvizCab", "WinGraphvizCab\WinGraphvizCab.vdproj", "{107F683B-5312-4BC5-94CD-9710E345A19E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB} = {835F3941-B421-4D30-BC8F-68F1D84D6BBB}
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinGraphvizMsi", "WinGraphvizMsi\WinGraphvizMsi.vdproj", "{31AE383D-8FB3-4A6E-926B-4877D7858C8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB} = {835F3941-B421-4D30-BC8F-68F1D84D6BBB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Release MinDependency = Release MinDependency
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Debug.ActiveCfg = Debug|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Debug.Build.0 = Debug|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release.ActiveCfg = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release.Build.0 = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release MinDependency.ActiveCfg = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release MinDependency.Build.0 = Release MinDependency|Win32
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Debug.ActiveCfg = Debug
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Debug.Build.0 = Debug
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release.ActiveCfg = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release.Build.0 = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release MinDependency.ActiveCfg = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release MinDependency.Build.0 = Release
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Debug.ActiveCfg = Debug
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Release.ActiveCfg = Release
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Release MinDependency.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

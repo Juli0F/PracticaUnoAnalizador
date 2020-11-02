@@ -1,0 +1,333 @@
+/****************************************************************************
+
+    PROGRAM: WinGraphviz.idl
+
+    PURPOSE: IDL source for WinGraphviz.dll
+
+    FUNCTIONS:        
+        
+    COMMENTS:
+
+        This file will be processed by the MIDL tool to
+		produce the type library (WinGraphviz.tlb) and marshalling code.
+
+
+****************************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+	//##ModelId=3F784022007A
+	typedef enum GraphvizTypeIndex
+	{
+		GRAPHVIZ_ATTRIBUTED_DOT	= 0,
+		GRAPHVIZ_PS				= 1,
+//		GRAPHVIZ_HPGL			= 2,
+//		GRAPHVIZ_PCL			= 3,
+//		GRAPHVIZ_MIF			= 4,
+//		GRAPHVIZ_PIC			= 5,				
+		GRAPHVIZ_PLAIN			= 6,
+		GRAPHVIZ_PLAIN_EXT		= 7,
+//		GRAPHVIZ_GD				= 8,
+//		GRAPHVIZ_MEMGD			= 9,
+//		GRAPHVIZ_GD2			= 10,
+		GRAPHVIZ_GIF			= 11,
+		GRAPHVIZ_JPEG			= 12,
+		GRAPHVIZ_PNG			= 13,
+		GRAPHVIZ_WBMP			= 14,
+//		GRAPHVIZ_XBM			= 15,
+		GRAPHVIZ_ISMAP			= 16,
+		GRAPHVIZ_IMAP			= 17,
+		GRAPHVIZ_CMAP			= 18,
+		GRAPHVIZ_VRML			= 19,
+//		GRAPHVIZ_VTX			= 20,
+//		GRAPHVIZ_METAPOST		= 21,
+//		GRAPHVIZ_FIG			= 22,
+		GRAPHVIZ_SVG			= 23,
+		GRAPHVIZ_SVGZ			= 24,
+		GRAPHVIZ_CANONICAL_DOT	= 25,
+//		GRAPHVIZ_PDF			= 26,
+		GRAPHVIZ_EMF			= 27,
+
+	} GraphvizTypeIndex;
+
+	//##ModelId=3F7840220001
+	[
+		object,
+		uuid(FFF6CEBE-BD9B-4C3A-A274-12E600B6BD10),
+		dual,
+		helpstring("IBinaryImage Interface"),
+		pointer_default(unique)
+	]
+	interface IBinaryImage : IDispatch
+	{
+		//##ModelId=3F784022000D
+		[id(1), helpstring("save Image on local file")] HRESULT Save([in]BSTR FilePath,[out,retval]VARIANT_BOOL * Result);
+		//##ModelId=3F7840220021
+		[id(3), helpstring("dump Image to IStream")] HRESULT Dump([in]IStream * stream,[out,retval]VARIANT_BOOL * Result);
+		//##ModelId=3F784022002B
+		[propget, id(2), helpstring("Type of the Image")] HRESULT Type([out, retval] BSTR *pVal);
+
+		//##ModelId=3F784022003D
+		[propget, id(4), helpstring("property picture")] HRESULT Picture([out, retval]IPictureDisp* *pVal);
+		//##ModelId=3F7840220047
+		[id(5), helpstring("Encode BinaryImage to Base64 format.")] HRESULT ToBase64String([out,retval]BSTR* Result);
+	};
+
+	//##ModelId=3F78402102E6
+	[
+		object,
+		uuid(A1080582-D33F-486E-BD5F-581989A3C7E9),
+		dual,
+		helpstring("IDOT Interface"),
+		pointer_default(unique)
+	]
+	interface IDOT : IDispatch
+	{
+		//##ModelId=3F78402102F9
+		[id(1), helpstring("convert output data as text-format")] HRESULT ToTextGraph([in]BSTR Source , [in]long Type,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210305
+		[id(2), helpstring("convert from DOT-language to DOT")] HRESULT ToDot([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210319
+		[id(3), helpstring("convert from DOT-language to CANON for tcl/tk version")] HRESULT ToCanon([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210323
+		[id(4), helpstring("convert from DOT-language to Simple,line-based ASCII format.")] HRESULT ToPlain([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F784021032D
+		[id(5), helpstring("convert from DOT-language to PlainExt")] HRESULT ToPlainExt([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210340
+		[id(6), helpstring("convert from DOT-language to SVG")] HRESULT ToSvg([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F784021034B
+		[id(7), helpstring("check DOT-language")] HRESULT Validate([in]BSTR Source,[out,retval]VARIANT_BOOL* Result);
+
+		//##ModelId=3F7840210355
+		[id(8), helpstring("convert from DOT-language to PostScript (EPSF) . ")] HRESULT ToPS([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F784021035F
+		[id(9), helpstring("convert from DOT-language to GIF ")] HRESULT ToGIF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F7840210371
+		[id(10), helpstring("convert from DOT-language to PNG (Portable Network Graphics).")] HRESULT ToPNG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F784021037C
+		[id(11), helpstring("convert from DOT-language to compressed SVG.")] HRESULT ToSVGZ([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F7840210387
+		[id(12), helpstring("convert from DOT-language to VRML")] HRESULT ToVRML([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F7840210391
+		[id(13), helpstring("convert output data as binary-format")] HRESULT ToBinaryGraph([in]BSTR Source , [in]long Type,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F784021039C
+		[id(14), helpstring("convert from DOT-language to HTML client-side image map")] HRESULT ToCMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402103A5
+		[id(15), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToIMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402103AF
+		[id(16), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToISMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402103B9
+		[id(17), helpstring("convert from DOT-language to Wireless BitMap")] HRESULT ToWBMP([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402103C3
+		[id(18), helpstring("convert from DOT-language to JPEG")] HRESULT ToJPEG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+		//##ModelId=3F78402103CD
+		[propget, id(19), helpstring("property Codepage")] HRESULT Codepage([out, retval] long *pVal);
+		//##ModelId=3F78402103D7
+		[propput, id(19), helpstring("property Codepage")] HRESULT Codepage([in] long newVal);
+		//##ModelId=3F78402103DF
+		[id(20), helpstring("method ToEMF")] HRESULT ToEMF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+
+
+	};
+	//##ModelId=3F784021021E
+	[
+		object,
+		uuid(B41D4C33-882C-4534-8352-EE981323CD96),
+		dual,
+		helpstring("INEATO Interface"),
+		pointer_default(unique)
+	]
+	interface INEATO : IDispatch
+	{
+		//##ModelId=3F7840210230
+		[id(1), helpstring("convert output data as text-format")] HRESULT ToTextGraph([in]BSTR Source , [in]long Type,[out,retval]BSTR* Result);
+		//##ModelId=3F784021023A
+		[id(2), helpstring("convert from DOT-language to CANON for tcl/tk version")] HRESULT ToCanon([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210244
+		[id(3), helpstring("convert from DOT-language to Dot")] HRESULT ToDot([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F784021024E
+		[id(4), helpstring("convert from DOT-language to Simple,line-based ASCII format.")] HRESULT ToPlain([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210258
+		[id(5), helpstring("convert from DOT-language to PlainExt")] HRESULT ToPlainExt([in]BSTR Source,[out,retval]BSTR* Result);
+		//##ModelId=3F7840210262
+		[id(6), helpstring("convert from DOT-language to SVG")] HRESULT ToSvg([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F7840210265
+		[id(7), helpstring("check DOT-language")] HRESULT Validate([in]BSTR Source,[out,retval]VARIANT_BOOL* Result);
+
+		//##ModelId=3F784021026E
+		[id(8), helpstring("convert from DOT-language to PostScript (EPSF) . ")] HRESULT ToPS([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F7840210278
+		[id(9), helpstring("convert from DOT-language to GIF ")] HRESULT ToGIF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F7840210282
+		[id(10), helpstring("convert from DOT-language to PNG (Portable Network Graphics). ")] HRESULT ToPNG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F784021028C
+		[id(11), helpstring("convert from DOT-language to compressed SVG.")] HRESULT ToSVGZ([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F7840210296
+		[id(12), helpstring("convert from DOT-language to VRML")] HRESULT ToVRML([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402102A0
+		[id(13), helpstring("convert output data as binary-format")] HRESULT ToBinaryGraph([in]BSTR Source , [in]long Type,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402102AB
+		[id(14), helpstring("convert from DOT-language to HTML client-side image map")] HRESULT ToCMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402102B3
+		[id(15), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToIMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402102BC
+		[id(16), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToISMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402102BF
+		[id(17), helpstring("convert from DOT-language to Wireless BitMap")] HRESULT ToWBMP([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402102C8
+		[id(18), helpstring("convert from DOT-language to JPEG")] HRESULT ToJPEG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+		//##ModelId=3F78402102D2
+		[propget, id(19), helpstring("property Codepage")] HRESULT Codepage([out, retval] long *pVal);
+		//##ModelId=3F78402102DB
+		[propput, id(19), helpstring("property Codepage")] HRESULT Codepage([in] long newVal);
+		//##ModelId=3F78402102DE
+		[id(20), helpstring("method ToEMF")] HRESULT ToEMF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+	};
+	//##ModelId=3F7840210176
+	[
+		object,
+		uuid(B22DD1A2-6884-47AA-9CAA-8E35C1154A5C),
+		dual,
+		helpstring("ITWOPI Interface"),
+		pointer_default(unique)
+	]
+	interface ITWOPI : IDispatch
+	{
+		//##ModelId=3F784021017E
+		[id(1), helpstring("convert output data as text-format")] HRESULT ToTextGraph([in]BSTR Source , [in]long Type,[out,retval]BSTR* Result);
+
+		//##ModelId=3F7840210189
+		[id(2), helpstring("convert from DOT-language to Dot")] HRESULT ToDot([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F7840210192
+		[id(3), helpstring("convert from DOT-language to CANON for tcl/tk version")] HRESULT ToCanon([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F784021019C
+		[id(4), helpstring("convert from DOT-language to Simple,line-based ASCII format.")] HRESULT ToPlain([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101A5
+		[id(5), helpstring("convert from DOT-language to PlainExt")] HRESULT ToPlainExt([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101AE
+		[id(6), helpstring("convert from DOT-language to SVG")] HRESULT ToSvg([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101B1
+		[id(7), helpstring("check DOT-language")] HRESULT Validate([in]BSTR Source,[out,retval]VARIANT_BOOL* Result);
+
+		//##ModelId=3F78402101BA
+		[id(8), helpstring("convert from DOT-language to PostScript (EPSF) . ")] HRESULT ToPS([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101C3
+		[id(9), helpstring("convert from DOT-language to GIF ")] HRESULT ToGIF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402101C6
+		[id(10), helpstring("convert from DOT-language to PNG (Portable Network Graphics). ")] HRESULT ToPNG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402101CE
+		[id(11), helpstring("convert from DOT-language to compressed SVG.")] HRESULT ToSVGZ([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402101D8
+		[id(12), helpstring("convert from DOT-language to VRML")] HRESULT ToVRML([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101E1
+		[id(13), helpstring("convert output data as binary-format")] HRESULT ToBinaryGraph([in]BSTR Source , [in]long Type,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F78402101EA
+		[id(14), helpstring("convert from DOT-language to HTML client-side image map")] HRESULT ToCMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101ED
+		[id(15), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToIMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101F6
+		[id(16), helpstring("convert from DOT-language to HTML server-side image map")] HRESULT ToISMAP([in]BSTR Source,[out,retval]BSTR* Result);
+
+		//##ModelId=3F78402101FF
+		[id(17), helpstring("convert from DOT-language to Wireless BitMap")] HRESULT ToWBMP([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+
+		//##ModelId=3F7840210202
+		[id(18), helpstring("convert from DOT-language to JPEG")] HRESULT ToJPEG([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+		//##ModelId=3F784021020A
+		[propget, id(19), helpstring("property Codepage")] HRESULT Codepage([out, retval] long *pVal);
+		//##ModelId=3F7840210213
+		[propput, id(19), helpstring("property Codepage")] HRESULT Codepage([in] long newVal);
+		//##ModelId=3F7840210216
+		[id(20), helpstring("method ToEMF")] HRESULT ToEMF([in]BSTR Source,[out,retval]IBinaryImage* * Result);
+	};
+	
+
+[
+	uuid(052DB09C-95F7-43BD-B7F8-492373D1151E),
+	version(1.0),
+	helpstring("WinGraphviz 1.01.7 Type Library")
+]
+library WINGRAPHVIZLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	enum GraphvizTypeIndex;
+
+	//##ModelId=3F7840220070
+	[
+		uuid(55811839-47B0-4854-81B5-0A0031B8ACEC),
+		helpstring("DOT Class")
+	]
+	coclass DOT
+	{
+		//##ModelId=3F7840220072
+		[default] interface IDOT;
+	};
+	//##ModelId=3F7840220066
+	[
+		uuid(1F25D86C-95BC-4E33-A177-EE8DABEF8B04),
+		helpstring("NEATO Class")
+	]
+	coclass NEATO
+	{
+		//##ModelId=3F7840220068
+		[default] interface INEATO;
+	};
+	//##ModelId=3F784022005B
+	[
+		uuid(6B3F62C8-80CE-470D-B2E4-0BA42A035228),
+		helpstring("BinaryImage Class")
+	]
+	coclass BinaryImage
+	{
+		//##ModelId=3F784022005D
+		[default] interface IBinaryImage;
+	};
+	//##ModelId=3F7840220051
+	[
+		uuid(684811FB-0523-420F-9E8F-A5452C65A19C),
+		helpstring("TWOPI Class")
+	]
+	coclass TWOPI
+	{
+		//##ModelId=3F7840220054
+		[default] interface ITWOPI;
+	};
+};

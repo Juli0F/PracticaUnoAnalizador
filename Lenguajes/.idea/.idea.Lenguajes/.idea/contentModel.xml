@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\TEMP.NO_DEVICE.000.001\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\TEMP.NO_DEVICE.000.001\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Lenguajes.-910378335.00" t="ExcludeRecursive" />
+    <e p="C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes" t="IncludeFlat">
+      <e p="Lenguajes" t="IncludeRecursive">
+        <e p="Analizador.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Fase2.cs" t="Include" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="Lenguajes.csproj" t="IncludeRecursive" />
+        <e p="Matriz.cs" t="Include" />
+        <e p="Movimiento.cs" t="Include" />
+        <e p="Nodo.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="prueba.cs" t="Include" />
+        <e p="Sintactico.cs" t="Include" />
+        <e p="Token.cs" t="Include" />
+        <e p="Token_Fase_2.cs" t="Include" />
+      </e>
+      <e p="Lenguajes.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

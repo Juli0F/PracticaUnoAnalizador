@@ -1,0 +1,10 @@
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Debug\Lenguajes.exe.config
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Debug\Lenguajes.exe
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Debug\Lenguajes.pdb
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.csprojAssemblyReference.cache
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.Form1.resources
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.Properties.Resources.resources
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.csproj.GenerateResource.cache
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.csproj.CoreCompileInputs.cache
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.exe
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Debug\Lenguajes.pdb

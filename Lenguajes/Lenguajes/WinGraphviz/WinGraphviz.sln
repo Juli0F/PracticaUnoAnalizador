@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinGraphviz", "WinGraphviz.vcproj", "{835F3941-B421-4D30-BC8F-68F1D84D6BBB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinGraphvizCab", "WinGraphvizCab\WinGraphvizCab.vdproj", "{107F683B-5312-4BC5-94CD-9710E345A19E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB} = {835F3941-B421-4D30-BC8F-68F1D84D6BBB}
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinGraphvizMsi", "WinGraphvizMsi\WinGraphvizMsi.vdproj", "{31AE383D-8FB3-4A6E-926B-4877D7858C8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB} = {835F3941-B421-4D30-BC8F-68F1D84D6BBB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release MinDependency|Win32 = Release MinDependency|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Debug|Win32.Build.0 = Debug|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release MinDependency|Win32.Build.0 = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release|Win32.ActiveCfg = Release MinDependency|Win32
+		{835F3941-B421-4D30-BC8F-68F1D84D6BBB}.Release|Win32.Build.0 = Release MinDependency|Win32
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Debug|Win32.ActiveCfg = Debug
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Debug|Win32.Build.0 = Debug
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release MinDependency|Win32.ActiveCfg = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release MinDependency|Win32.Build.0 = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release|Win32.ActiveCfg = Release
+		{107F683B-5312-4BC5-94CD-9710E345A19E}.Release|Win32.Build.0 = Release
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Debug|Win32.ActiveCfg = Debug
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Release MinDependency|Win32.ActiveCfg = Release
+		{31AE383D-8FB3-4A6E-926B-4877D7858C8A}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
