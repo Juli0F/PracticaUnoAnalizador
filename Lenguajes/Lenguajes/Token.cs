@@ -117,13 +117,13 @@ namespace Lenguajes
                 case Tipo.KW_CADENA:
                     clasificacion = "cadena"; break;
                 case Tipo.FALSO:
-                    clasificacion = "boolean"; break;
+                    clasificacion = "booleano"; break;
                 case Tipo.LLAVE_ABIERTA:
                     clasificacion = "llave_abierta"; break;
                 case Tipo.LLAVE_CERRADA:
                     clasificacion = "llave_cerrada"; break;
                 case Tipo.VERDADERO:
-                    clasificacion = "boolean"; break;
+                    clasificacion = "booleano"; break;
                 case Tipo.PRINCIPAL:
                     clasificacion = "principal"; break;
                 case Tipo.MAS:

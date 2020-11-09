@@ -8,3 +8,7 @@ C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\o
 C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Release\Lenguajes.csproj.CoreCompileInputs.cache
 C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Release\Lenguajes.exe
 C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Release\Lenguajes.pdb
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Release\AutocompleteMenu-ScintillaNET.dll
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Release\ScintillaNET.dll
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\bin\Release\ScintillaNET.xml
+C:\Users\TEMP.NO_DEVICE.000.001\Desktop\Lenguajes\proyecto\Lenguajes\Lenguajes\obj\Release\Lenguajes.csproj.CopyComplete

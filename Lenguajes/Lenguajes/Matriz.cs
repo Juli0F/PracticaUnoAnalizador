@@ -62,7 +62,6 @@ namespace Lenguajes
 
         public void setProduccionesDentro()
         {
-            //tabla de analis LL1
             matrizProducciones[0, 0] = "principal par_abierto par_cerrado BLOQUE";
             matrizProducciones[0, 33] = "$";
 
@@ -468,7 +467,7 @@ namespace Lenguajes
                                     pila.Pop();
                                     columna_actua = -1;
 
-                                    entrada = delFirst(txtEntrada, indexCola);
+                                    //entrada = delFirst(txtEntrada, indexCola);
 
                                     this.rich.Text = rich.Text + "\n" + ("Pedir Sigueinte Token");
                                     this.rich.Text = rich.Text + "\n" + ("\nsiguiente Token -->" + entrada);
@@ -492,7 +491,7 @@ namespace Lenguajes
                         {
 
                             //string valueCelda = matrizProducciones[fila_actual, columna_actua];
-
+                            //parabierto
                             string value = pila.Peek();
                             if (entrada.Equals(value))
                             {
@@ -574,7 +573,7 @@ namespace Lenguajes
 
                             string topePila2 = pila.Peek();
                             this.rich.Text = rich.Text + "\n" + ("Ultimo Elemento ingresado: " + topePila2);
-
+                            //verificar aca no elimina el parentesis cerrado
                             if (topePila2.Equals(entrada))
                             {
                                 this.rich.Text = rich.Text + "\n" + ("Reduce: " + entrada);

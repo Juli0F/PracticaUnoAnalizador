@@ -30,6 +30,7 @@ namespace Lenguajes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            log.Text = "";
             Console.WriteLine("Iniciando");
             String entrada = txtEntrada.Text;
             Analizador lexico = new Analizador();

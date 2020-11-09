@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtEntrada = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,11 +38,14 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.log = new System.Windows.Forms.RichTextBox();
+            this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEntrada
             // 
+            this.autocompleteMenu1.SetAutocompleteMenu(this.txtEntrada, this.autocompleteMenu1);
             this.txtEntrada.Location = new System.Drawing.Point(1, 27);
             this.txtEntrada.Name = "txtEntrada";
             this.txtEntrada.Size = new System.Drawing.Size(1198, 467);
@@ -103,11 +108,53 @@
             // 
             // log
             // 
+            this.autocompleteMenu1.SetAutocompleteMenu(this.log, null);
             this.log.Location = new System.Drawing.Point(0, 525);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(1199, 222);
             this.log.TabIndex = 5;
             this.log.Text = "";
+            // 
+            // autocompleteMenu1
+            // 
+            this.autocompleteMenu1.Colors = ((AutocompleteMenuNS.Colors)(resources.GetObject("autocompleteMenu1.Colors")));
+            this.autocompleteMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.autocompleteMenu1.ImageList = this.imageList1;
+            this.autocompleteMenu1.Items = new string[] {
+        "principal()",
+        "entero",
+        "decimal",
+        "boolean",
+        "cadena ",
+        "caracter",
+        "MIENTRAS",
+        "HACER",
+        "DESDE ",
+        "HASTA",
+        "INCREMENTO",
+        "SI",
+        "SINO_SI",
+        "SINO",
+        "==",
+        "!=",
+        "||",
+        "&&",
+        ">=",
+        "<=",
+        "_myEntero",
+        "_myCadena",
+        "_myDecimal",
+        "_myCaracter",
+        "escribir",
+        "leer",
+        ""};
+            this.autocompleteMenu1.TargetControlWrapper = null;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
@@ -139,6 +186,8 @@
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox log;
+        private AutocompleteMenuNS.AutocompleteMenu autocompleteMenu1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
